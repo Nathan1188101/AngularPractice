@@ -21,4 +21,14 @@ export class MediaService {
     return this.http.post(`${this.serverUrl}/media`, media)
   }
 
+  //UPDATE using PUT
+  updateMedia(media: any){
+    return this.http.put(`${this.serverUrl}/media/${media._id}`, media)
+  }
+
+  //DELETE
+  deleteMedia(_id: string){
+    return this.http.delete(`${this.serverUrl}/media/${_id}`)
+  }
+
 }
